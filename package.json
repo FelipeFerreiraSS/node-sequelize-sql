@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "vercel-build": "sequelize db:migrate",
-  "start": "node src/server.js"
+    "vercel-build": "yarn install --production && yarn add pg --production && yarn sequelize db:migrate",
+    "start": "node src/server.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
