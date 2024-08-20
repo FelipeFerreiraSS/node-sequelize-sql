@@ -7,7 +7,11 @@ class Address extends Model {
       street: DataTypes.STRING,
       number: DataTypes.INTEGER,
     }, {
-      sequelize
+      sequelize,
+      tableName: 'addresses',
+      timestamps: true,
+      createdAt: 'created_at',
+      updatedAt: 'updated_at',
     })
   }
 

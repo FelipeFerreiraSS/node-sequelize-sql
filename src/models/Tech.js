@@ -6,7 +6,10 @@ class Tech extends Model {
       name: DataTypes.STRING,
     }, {
       sequelize,
-      tableName: 'techs'
+      tableName: 'techs',
+      timestamps: true,
+      createdAt: 'created_at',
+      updatedAt: 'updated_at',
     })
   }
 

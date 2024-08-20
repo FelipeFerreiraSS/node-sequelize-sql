@@ -1,11 +1,13 @@
 const Sequelize = require('sequelize')
 const dbConfig = require('../config/database')
+const dotenv = require('dotenv');
+dotenv.config();
 
 const User = require('../models/User')
 const Address = require('../models/Address')
 const Tech = require('../models/Tech')
 
-const connection = new Sequelize(dbConfig)
+const connection = new Sequelize(process.env.DATABASE_URL)
 
 User.init(connection)
 Address.init(connection)
